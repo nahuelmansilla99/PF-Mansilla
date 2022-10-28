@@ -1,0 +1,17 @@
+@import "color";
+@import "mixins";
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    .logo__nav{
+        @include transicion;
+        &:hover{
+            color: $color-hover;
+            transform: scale(1.05, 1.05);
+        }
+    }
+    .marcador{
+        border-bottom: 1px solid rgba(0, 0, 0, 0.152);
+    }
+}
+

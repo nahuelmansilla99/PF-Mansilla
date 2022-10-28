@@ -1,0 +1,70 @@
+@import "color";
+@import "mixins";
+.equipos {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    margin-bottom: 50px;
+    gap: 16px;
+
+    img {
+        display: flex;
+        width: 366px;
+        height: 550px;
+        @include borde-radius;
+        object-fit: cover;
+    }
+
+    .equipos__grupo {
+        @include centrado;
+        position: relative;
+        transition:all .3s ease;
+        transition: transform .5s;
+    
+        &:hover{
+            cursor: pointer;
+            transform: scale(1.03);
+        }
+
+        p {
+            @include centrado;
+            position: absolute;
+            color: $color-texto;
+            font-size: 30px;
+            text-transform: uppercase;
+            letter-spacing: .2rem;
+            font-weight: bold;
+            background-color: rgba(0, 0, 0, .3);
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+            border-radius: 10px;
+        }
+    }
+}
+
+.equiposEspacio {
+    display: flex;
+    gap: 10px;
+}
+
+
+
+@media (max-width:1500px){
+    .equipos{
+        img{
+        width: 244px;
+        height:366px;
+        }
+    }
+}
+
+@media (max-width: 1050px){
+    .equipos{
+        display:flex;
+        flex-direction:row;
+        flex-wrap:wrap;
+    }
+}

@@ -1,0 +1,48 @@
+@import "color";
+@import "mixins";
+.body__locales{
+    background-image: url(./../imagenes/fondo-locales.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 20em;
+}
+.main__locales{
+    margin-bottom: 150px;
+}
+.texto__dividido{
+    color: $color-texto;
+    font-size: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 30px;
+    padding-top: 50px;
+    text-shadow: 0px 5px 10px $color-texto2 ;
+    p{
+        font-size: 20px;
+        color: $color-texto;
+    }
+}
+
+.todo{
+    margin: 0;
+    @include centrado;
+    margin-bottom: 50px;
+    .accordion{
+        padding: 50px;
+        max-width: 1000px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 660px){
+    .texto__dividido{
+        display: none;
+    }
+    .accordion{
+        padding: 10px;
+    }
+}

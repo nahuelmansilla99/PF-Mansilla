@@ -1,0 +1,81 @@
+@import "header";
+@import "footer";
+@import "index";
+@import "productos";
+@import "contacto";
+@import "sobrenosotros";
+@import "locales";
+@import "color";
+@import "mixins";
+
+html{
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #efefef !important;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 20px;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
+    margin: 0;
+}
+p{
+    margin: 0;
+}
+
+.h1{
+    font-size: 34px;
+}
+h1{
+    font-size: 34px;
+}
+
+.texto__link {
+    a{
+        text-decoration: none;
+        color: $color-texto2;
+    }
+}
+
+.btn{
+    width: 100%;
+    font-weight: 600;
+    font-size:19px;
+    p{
+        transition: all 0.3s ease;
+        &:hover{
+            transform: scale(1.1, 1.1);
+        }
+    }
+}
+
+.titulo {
+    display: flex;
+    font-size: 34px;
+    text-transform: uppercase;
+    font-style: oblique;
+    margin: 30px;
+    font-weight: bold;
+
+    a{
+        transition: all 0.3s ease;
+
+        &:hover{
+        color: $color-hover;
+        }
+    }
+
+    @media (max-width: 645px) {
+        text-align: center;
+    }
+}

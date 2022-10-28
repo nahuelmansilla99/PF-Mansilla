@@ -1,0 +1,83 @@
+@import "color";
+@import "mixins";
+
+.body__contacto{
+    background-image: url(../imagenes/fondo-contacto.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 20em;
+}
+
+.contacto__form{
+    @include centrado;
+    flex-direction: column;
+    padding: 30px;
+    @include borde-radius;
+    background-color: $color-background2;
+    max-width: 500px;
+    width: 80%;
+    margin: 50px;
+    @media (max-width: 550px){
+        padding: 10px;
+        padding-top: 0;
+        margin-top: 15px;
+        .titulo{
+            margin: 5px;
+        }
+    }
+    .nombreyapellido{
+        display: flex;
+        @media (max-width: 550px){
+            flex-direction: column;
+        }
+    }
+}
+
+.contacto__container__grupo{
+    @include centrado;
+    padding: 10px;
+    flex-direction: column;
+    @media (max-width: 550px){
+        padding: 5px ;
+    }
+
+    label{
+        font-weight: bold;
+        padding-bottom: 5px;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
+
+.main__contacto{
+    margin-bottom: 150px;
+    @include centrado;
+    .row{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.contacto__input{
+    background: none;
+    padding: 10px;
+    width: 80%;
+    border: none;
+    border-bottom: 1px solid #0000003a;
+    resize: none;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all .3s ease;
+    &:focus{
+        width: 100%;
+        border:none;
+        outline: 1px solid rgba(0, 0, 0, 0.152) ;
+        border-radius: 5px;
+        text-align: start;
+    }
+}

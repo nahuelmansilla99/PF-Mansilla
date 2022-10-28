@@ -1,0 +1,13 @@
+@mixin centrado{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin borde-radius {
+    border-radius: 10px;
+}
+
+@mixin transicion {
+    transition: .3s ease;
+}
